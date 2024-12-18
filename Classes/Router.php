@@ -88,13 +88,18 @@ class Router
                 
                 // создаём объект класса 
                 $controllerObject = new $controller(self::$route);
+
+                /** @var Controller $controllerObject */
+                $controllerObject->getModel();
+                
                 // метод, который будет вызываться
                 $action = lower_camelCase(self::$route["action"]);
 
                 if(method_exists($controllerObject, $action)){
-                    
                     // Вызываем метод 
                     $controllerObject->$action();
+
+
                 }else{
                     echo "<h1>Метод: {$controller}::{$action} не найден!</h1>";
                     die;    

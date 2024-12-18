@@ -2,9 +2,9 @@
 
 namespace app\controllers\admin;
 
-class MainController{
+use Classes\Controller;
 
-    public function __construct(public array $route = []){}
+class MainController extends Controller{
 
     public function index()
     {

@@ -6,6 +6,7 @@ require_once "Config/helpers.php";
 
 require_once "Config/routes.php";
 require_once "Classes/Router.php";
+require_once "Classes/Controller.php";
 
 use Classes\Router;
 
